@@ -35,3 +35,6 @@ A React-based search bar component with autocomplete functionality, debounce, an
 - **cd react-assignment**
 - **npm install**
 - **npm run dev**
+
+## Author:
+ - Ripunjay Rai
