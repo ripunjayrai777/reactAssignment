@@ -32,6 +32,6 @@ A React-based search bar component with autocomplete functionality, debounce, an
 
 2. Install dependencies if this is part of a React project:
 
--cd react-assignment
--npm install
--npm run dev
+- **cd react-assignment**
+- **npm install**
+- **npm run dev**
