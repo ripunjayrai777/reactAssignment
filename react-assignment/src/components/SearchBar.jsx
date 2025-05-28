@@ -71,7 +71,7 @@ export default function SearchBar() {
         <input
           type="text"
           className="searchbar-input"
-          placeholder="Search..."
+          placeholder="Search Here"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => query && setShowDropdown(true)}
