@@ -1,61 +1,88 @@
-.searchbar-container {
+ .searchbar-container {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
-  font-family: 'Segoe UI' sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 0 1rem;
 }
 
 .searchbar-input-wrapper {
-  width: 24rem;
+  width: 100%;
+  max-width: 28rem;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 .searchbar-input {
   width: 100%;
-  padding: 0.5rem 0.75rem;
-  border: 2px solid #3b82f6;
-  border-radius: 0.375rem;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.5rem;
   font-size: 1rem;
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   outline-offset: 2px;
   outline-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .searchbar-input:focus {
   border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
   outline-color: #2563eb;
+  background-color: #f8fafc;
+}
+
+.searchbar-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 1.2rem;
+  pointer-events: none;
 }
 
 .searchbar-dropdown {
   position: absolute;
-  top: calc(100% + 0.25rem);
+  top: calc(100% + 0.5rem);
   left: 0;
-  width: 100%;
+  width: 31.8rem;
   max-height: 15rem;
   overflow-y: auto;
   background-color: #ffffff;
-  border: 1px solid #d1d5db;
-  border-radius: 0 0 0.375rem 0.375rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .searchbar-item {
-  padding: 0.5rem 0.75rem;
+  padding: 0.75rem 1rem;
   cursor: pointer;
-  transition: background-color 0.15s ease-in-out;
-  user-select: none;
+  transition: background-color 0.2s ease-in-out;
   font-size: 0.95rem;
+  user-select: none;
 }
 
 .searchbar-item b {
   color: #2563eb;
+  font-weight: 600;
 }
 
 .searchbar-item:hover,
 .searchbar-item:focus {
-  background-color: #e0e7ff;
+  background-color: #f0f4ff;
   outline: none;
 }
-
