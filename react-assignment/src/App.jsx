@@ -2,10 +2,20 @@ import SearchBar from "./components/SearchBar";
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <h1 className="text-3xl font-semibold text-center mt-10 text-blue-500">SearchPro</h1>
-      <SearchBar />
-    </div>
+    <div style={{ minHeight: '100vh', backgroundColor: 'white' }}>
+  <h1
+    style={{
+      fontSize: '1.875rem',
+      fontWeight: '600',
+      textAlign: 'center',
+      marginTop: '2.5rem',
+      color: '#3b82f6',  
+    }}
+  >
+    SearchPro
+  </h1>
+  <SearchBar />
+</div>
   );
 }
 
